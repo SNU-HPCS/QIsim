@@ -90,7 +90,7 @@ python3.8 cmos_device_model.py -n {node} -d {Vdd} -r {Vth}
 #### Example:
 ```
 cd device_model/cmos
-python3.8 cmos_device_model.py -n 22
+python3.8 cmos_device_model.py -n 14
 ```
 
 ### 1-2. 4K SFQ-based QCI
