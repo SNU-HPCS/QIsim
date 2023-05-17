@@ -1,0 +1,115 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Jul 28 12:46:11 2022
+[*]
+[dumpfile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/submodules/down_mixer.vcd"
+[dumpfile_mtime] "Thu Jul 28 12:45:12 2022"
+[dumpfile_size] 5817976
+[savefile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/submodules/down_mixer.gtkw"
+[timestart] 0
+[size] 3840 2071
+[pos] -1 -1
+*-25.126930 202240000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] down_mixer_tb.
+[treeopen] down_mixer_tb.UUT.
+[sst_width] 261
+[signals_width] 457
+[sst_expanded] 1
+[sst_vpaned_height] 664
+@24
+down_mixer_tb.I
+down_mixer_tb.addr_0[9:0]
+down_mixer_tb.addr_1[10:0]
+@28
+down_mixer_tb.clk
+@200
+-
+-iq_in_1
+@8421
+down_mixer_tb.i_in_1[15:0]
+@20000
+-
+-
+-
+@8420
+down_mixer_tb.q_in_1[15:0]
+@20000
+-
+-
+-
+@200
+-iq_in_2
+@8420
+down_mixer_tb.i_in_2[15:0]
+@20000
+-
+-
+-
+@8420
+down_mixer_tb.q_in_2[15:0]
+@20000
+-
+-
+-
+@200
+-
+-mixer_internal
+@20000
+-
+-
+-
+-
+@200
+-
+@8420
+down_mixer_tb.UUT.i1_i2_multiplier.data_in_1[15:0]
+down_mixer_tb.UUT.i1_i2_multiplier.data_in_2[15:0]
+down_mixer_tb.UUT.i1_i2_multiplier.data_intermediate[31:0]
+@200
+-
+@8420
+down_mixer_tb.UUT.mult_out_i1_i2[15:0]
+down_mixer_tb.UUT.mult_out_q1_q2[15:0]
+@200
+-
+@8420
+down_mixer_tb.UUT.mult_out_i1_q2[15:0]
+down_mixer_tb.UUT.mult_out_q1_i2[15:0]
+@200
+-
+-iq_out
+@c08420
+down_mixer_tb.i_out[15:0]
+@28
+(0)down_mixer_tb.i_out[15:0]
+(1)down_mixer_tb.i_out[15:0]
+(2)down_mixer_tb.i_out[15:0]
+(3)down_mixer_tb.i_out[15:0]
+(4)down_mixer_tb.i_out[15:0]
+(5)down_mixer_tb.i_out[15:0]
+(6)down_mixer_tb.i_out[15:0]
+(7)down_mixer_tb.i_out[15:0]
+(8)down_mixer_tb.i_out[15:0]
+(9)down_mixer_tb.i_out[15:0]
+(10)down_mixer_tb.i_out[15:0]
+(11)down_mixer_tb.i_out[15:0]
+(12)down_mixer_tb.i_out[15:0]
+(13)down_mixer_tb.i_out[15:0]
+(14)down_mixer_tb.i_out[15:0]
+(15)down_mixer_tb.i_out[15:0]
+@1401200
+-group_end
+@20000
+-
+-
+-
+@8420
+down_mixer_tb.q_out[15:0]
+@20000
+-
+-
+-
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

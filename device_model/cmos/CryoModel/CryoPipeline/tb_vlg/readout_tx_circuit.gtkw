@@ -1,0 +1,138 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Aug  3 12:34:39 2022
+[*]
+[dumpfile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/temp/readout_tx_circuit.vcd"
+[dumpfile_mtime] "Wed Aug  3 12:33:19 2022"
+[dumpfile_size] 755382
+[savefile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/readout_tx_circuit.gtkw"
+[timestart] 0
+[size] 3359 1838
+[pos] 1964 582
+*-21.708994 396400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] readout_tx_circuit_tb.
+[sst_width] 340
+[signals_width] 449
+[sst_expanded] 1
+[sst_vpaned_height] 583
+@200
+-Top module
+@28
+readout_tx_circuit_tb.rst
+@420
+readout_tx_circuit_tb.I
+@28
+readout_tx_circuit_tb.clk
+@22
+readout_tx_circuit_tb.glb_counter[23:0]
+readout_tx_circuit_tb.inst_list_wr_addr[4:0]
+readout_tx_circuit_tb.inst_list_wr_data[49:0]
+@28
+readout_tx_circuit_tb.inst_list_wr_en
+@22
+readout_tx_circuit_tb.nco_ftw_in[21:0]
+@28
+readout_tx_circuit_tb.nco_ftw_wr_en
+readout_tx_circuit_tb.nco_ftw_wr_sel[2:0]
+@200
+-
+@201
+-output
+@28
+readout_tx_circuit_tb.valid_sin_wave_out
+@8022
+readout_tx_circuit_tb.sin_wave_out[18:0]
+@20000
+-
+@200
+-
+-readout_circuit.v
+@22
+readout_tx_circuit_tb.UUT.inst_list_rd_addr[4:0]
+readout_tx_circuit_tb.UUT.inst_list_rd_data[49:0]
+@200
+-
+@22
+readout_tx_circuit_tb.UUT.PC[4:0]
+@28
+readout_tx_circuit_tb.UUT.update_pc
+@200
+-
+@c00022
+readout_tx_circuit_tb.UUT.channel_en[5:0]
+@28
+(0)readout_tx_circuit_tb.UUT.channel_en[5:0]
+(1)readout_tx_circuit_tb.UUT.channel_en[5:0]
+(2)readout_tx_circuit_tb.UUT.channel_en[5:0]
+(3)readout_tx_circuit_tb.UUT.channel_en[5:0]
+(4)readout_tx_circuit_tb.UUT.channel_en[5:0]
+(5)readout_tx_circuit_tb.UUT.channel_en[5:0]
+@1401200
+-group_end
+@22
+readout_tx_circuit_tb.UUT.cur_time[19:0]
+readout_tx_circuit_tb.UUT.length[19:0]
+@200
+-
+@22
+readout_tx_circuit_tb.UUT.valid_inst_in[5:0]
+@200
+-
+-tx_signal_gen_unit[0]
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.nco_ftw_wr_en
+@22
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.nco_ftw_in[21:0]
+@200
+-
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.nco_mux_sel
+@22
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.nco_mux_data_in[19:0]
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.nco_mux_data_out[9:0]
+@200
+-
+@8022
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.selected_nco_phase[9:0]
+@20000
+-
+@200
+-
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.valid_sin_wave_out
+@8022
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance.sin_wave_out[15:0]
+@20000
+-
+-
+@200
+-
+-tx_signal_gen_unit[1]
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.nco_ftw_wr_en
+@22
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.nco_ftw_in[21:0]
+@200
+-
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.nco_mux_sel
+@22
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.nco_mux_data_in[19:0]
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.nco_mux_data_out[9:0]
+@200
+-
+@8022
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.selected_nco_phase[9:0]
+@20000
+-
+@200
+-
+@28
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.valid_sin_wave_out
+@8022
+readout_tx_circuit_tb.UUT.genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance.sin_wave_out[15:0]
+@20000
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0

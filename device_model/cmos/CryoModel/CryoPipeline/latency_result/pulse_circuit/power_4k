@@ -1,0 +1,62 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : pulse_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:16 2023
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /work/QIsim/device_model/cmos/CryoModel/CryoPipeline/freepdk-45nm/stdview/NangateOpenCellLibrary.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+pulse_circuit                            27.075  660.729 9.59e+03  697.392 100.0
+  genblk_pulse_circuit[0].pulse_amp_generator_instance (pulse_amp_generator_AMP_MEMORY_NUM_ENTRY512_AMP_MEMORY_ADDR_WIDTH9_AMP_MEMORY_DATA_WIDTH19_GLB_COUNTER_WIDTH24_DIRECTION_WIDTH2_AMP_WIDTH12_LENGTH_WIDTH7_INST_LIST_NUM_ENTRY32_INST_LIST_ADDR_WIDTH5_INST_LIST_DATA_WIDTH26_PC_WIDTH5)
+                                         23.005  601.362 8.81e+03  633.175  90.8
+    mux_sel_amp (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH12)
+                                          0.104    1.201  393.530    1.699   0.2
+    pulse_length_counter_instance (pulse_length_counter_LENGTH_WIDTH7)
+                                          1.215   84.765 1.61e+03   87.590  12.6
+      length_count_comparator (comparator_param_DATA_WIDTH7)
+                                          0.000    0.000   97.862 9.79e-02   0.0
+      mux_next_length_count (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH7)
+                                          0.000    0.000  245.643    0.246   0.0
+      length_count_reg (ff_DATA_WIDTH7)
+                                          1.200   84.759  915.289   86.874  12.5
+    pulse_amp_memory_addr_generator_instance (pulse_amp_memory_addr_generator_DIRECTION_WIDTH2_AMP_MEMORY_ADDR_WIDTH9)
+                                          3.427   88.273 1.32e+03   93.022  13.3
+      amp_memory_addr_counter (counter_param_COUNT_WIDTH7)
+                                          3.054   87.817 1.30e+03   92.170  13.2
+    direction_ff (ff_DATA_WIDTH2)      1.87e-03   24.163  275.933   24.441   3.5
+    valid_inst_list_ff (ff_DATA_WIDTH1)
+                                       6.90e-04   12.083   99.028   12.183   1.7
+    pc_0 (pulse_pc_PC_WIDTH5)             0.885   60.607  564.573   62.056   8.9
+    glb_counter_comparator (comparator_param_DATA_WIDTH24_EQUAL1)
+                                          9.562   26.108 1.09e+03   36.758   5.3
+  genblk_pulse_circuit[0].pulse_mask_decoder_instance (pulse_mask_decoder_MASK_WIDTH3_GLB_COUNTER_WIDTH24_INST_LIST_ADDR_WIDTH5_INST_LIST_DATA_WIDTH26_DIRECTION_WIDTH2)
+                                          3.646   58.986  738.766   63.371   9.1
+1

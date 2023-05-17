@@ -1,0 +1,2 @@
+inst_list_n32_50b.mem
+sin_n1024_16b.mem

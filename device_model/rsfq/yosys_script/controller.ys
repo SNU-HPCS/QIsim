@@ -1,0 +1,13 @@
+read_verilog ../yosys_verilog/controller.v
+read_verilog -lib sfq_cells.v
+
+hierarchy -top controller_param
+
+synth
+dfflibmap -liberty sfq_cells.lib
+abc -liberty sfq_cells.lib
+
+stat -liberty sfq_cells.lib
+
+
+write_verilog ../synth_vlg/controller.v

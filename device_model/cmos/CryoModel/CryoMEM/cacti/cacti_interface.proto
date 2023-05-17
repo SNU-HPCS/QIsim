@@ -1,0 +1,51 @@
+syntax = "proto2";
+
+message CactiInput{
+    message TechnologyParameter{
+        message DeviceType{
+            optional double R_nch_on = 1;
+            optional double R_pch_on = 2;
+            optional double Vdd      = 3;
+            optional double Vth      = 4;
+            optional double Vcc_min  = 5;
+            optional double I_on_n   = 6;
+            optional double I_on_p   = 7;
+            optional double I_off_n  = 8;
+            optional double I_off_p  = 9;
+            optional double I_g_on_n = 10;
+            optional double I_g_on_p = 11;
+            optional double n_to_p_eff_curr_drv_ratio = 12;
+        }
+        message InterconnectType{
+            optional double R_per_um      = 1;
+            optional double R_per_um_mult = 2;
+        }
+
+        optional DeviceType sram_cell   = 1;
+        optional DeviceType dram_acc    = 2; // DRAM access transistor
+        optional DeviceType dram_wl     = 3; // DRAM wordline transistor
+        optional DeviceType peri_global = 4; // peripheral global
+
+        optional InterconnectType wire_local       = 5;
+        optional InterconnectType wire_inside_mat  = 6;
+        optional InterconnectType wire_outside_mat = 7;
+
+        optional double vpp             = 8;
+        optional double dram_cell_I_on  = 9;
+        optional double dram_cell_Vdd   = 10;
+
+        optional int32 cache_sz = 11;
+    }
+
+    message ConstParameter{
+        optional double CU_RESISTIVITY = 1;
+        optional double BULK_CU_RESISTIVITY = 2;
+    }
+
+    required string              config_file = 1;
+    optional TechnologyParameter tech_param  = 2;
+    optional ConstParameter      const_param = 3;
+
+    optional string              dyn_param_prefix = 4;
+    optional string              wire_config = 5;
+}

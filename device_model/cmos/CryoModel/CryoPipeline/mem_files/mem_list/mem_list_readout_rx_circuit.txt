@@ -1,0 +1,7 @@
+inst_list_n32_57b.mem
+signed_sin_n1024_7b.mem
+signed_sin_n1024_8b.mem
+signed_sin_n1024_16b.mem
+signed_cos_n1024_7b.mem
+signed_cos_n1024_8b.mem
+signed_cos_n1024_16b.mem

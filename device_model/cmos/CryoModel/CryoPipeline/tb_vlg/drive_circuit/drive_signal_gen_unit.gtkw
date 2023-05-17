@@ -1,0 +1,155 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Jul 21 13:04:48 2022
+[*]
+[dumpfile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/drive_circuit/drive_signal_gen_unit.vcd"
+[dumpfile_mtime] "Thu Jul 21 13:02:13 2022"
+[dumpfile_size] 7990321
+[savefile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/drive_circuit/drive_signal_gen_unit.gtkw"
+[timestart] 0
+[size] 3840 2081
+[pos] 1800 515
+*-25.791796 5200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] drive_signal_gen_unit_tb.
+[treeopen] drive_signal_gen_unit_tb.UUT.
+[treeopen] drive_signal_gen_unit_tb.UUT.genblk_nco[5].
+[sst_width] 372
+[signals_width] 383
+[sst_expanded] 1
+[sst_vpaned_height] 668
+@200
+-
+-inst_table initialization
+-
+-
+@28
+drive_signal_gen_unit_tb.clk
+drive_signal_gen_unit_tb.UUT.rst
+@22
+drive_signal_gen_unit_tb.PC[10:0]
+@29
+drive_signal_gen_unit_tb.valid_PC_in
+@200
+-
+-inst_list
+-
+@22
+drive_signal_gen_unit_tb.UUT.inst_list_rd_addr[10:0]
+drive_signal_gen_unit_tb.UUT.qubit_sel[3:0]
+@28
+drive_signal_gen_unit_tb.UUT.rz_mode
+@22
+drive_signal_gen_unit_tb.UUT.phase_imm[11:0]
+@28
+drive_signal_gen_unit_tb.UUT.inst[2:0]
+@200
+-
+-inst_table
+@22
+drive_signal_gen_unit_tb.UUT.inst_table_rd_data[543:0]
+drive_signal_gen_unit_tb.UUT.inst_table_mux_sel[3:0]
+drive_signal_gen_unit_tb.UUT.inst_table_mux_data_out[33:0]
+drive_signal_gen_unit_tb.UUT.start_addr[15:0]
+drive_signal_gen_unit_tb.UUT.stop_addr[15:0]
+@200
+-
+@28
+drive_signal_gen_unit_tb.is_read_env_fin
+@200
+-
+-enve_memory
+@28
+drive_signal_gen_unit_tb.set_enve_memory_addr
+drive_signal_gen_unit_tb.increment_enve_memory_addr
+@200
+-
+@22
+drive_signal_gen_unit_tb.UUT.enve_memory_addr[15:0]
+drive_signal_gen_unit_tb.UUT.enve_memory_rd_data[17:0]
+@8022
+drive_signal_gen_unit_tb.UUT.phase[9:0]
+@20000
+-
+-
+-
+-
+@8022
+drive_signal_gen_unit_tb.UUT.amplitude[7:0]
+@20000
+-
+-
+-
+-
+@200
+-
+-nco
+@22
+drive_signal_gen_unit_tb.nco_phase_wr_en[15:0]
+drive_signal_gen_unit_tb.nco_z_corr_mode[15:0]
+drive_signal_gen_unit_tb.nco_z_corr_wr_en[15:0]
+@200
+-
+@22
+drive_signal_gen_unit_tb.UUT.nco_mux_data_in[159:0]
+drive_signal_gen_unit_tb.UUT.nco_mux_sel[3:0]
+drive_signal_gen_unit_tb.UUT.nco_mux_data_out[9:0]
+@8022
+drive_signal_gen_unit_tb.UUT.selected_nco_phase[9:0]
+@20000
+-
+-
+-
+-
+@200
+-
+@28
+drive_signal_gen_unit_tb.UUT.rz_mode
+drive_signal_gen_unit_tb.UUT.valid_z_corr[15:0]
+@200
+-genblk_nco[5]
+@22
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.z_corr_in[11:0]
+@28
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.z_corr_wr_en
+@22
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.z_corr[11:0]
+@28
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.phase_wr_en
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.z_corr_mode
+@22
+drive_signal_gen_unit_tb.UUT.genblk_nco[5].nco_instance.phase[21:0]
+@200
+-
+-
+-output
+@8022
+drive_signal_gen_unit_tb.UUT.i_out[8:0]
+@20000
+-
+-
+-
+-
+@8022
+drive_signal_gen_unit_tb.UUT.q_out[8:0]
+@20000
+-
+-
+-
+-
+@28
+drive_signal_gen_unit_tb.valid_out
+@200
+-
+-Pipeline latch
+@28
+drive_signal_gen_unit_tb.UUT.valid_polar_mod
+drive_signal_gen_unit_tb.UUT.valid_out
+@200
+-
+-
+@28
+drive_signal_gen_unit_tb.UUT.genblk_inst_table[14].inst_table.wr_addr[2:0]
+@22
+drive_signal_gen_unit_tb.UUT.genblk_inst_table[14].inst_table.wr_data[33:0]
+[pattern_trace] 1
+[pattern_trace] 0

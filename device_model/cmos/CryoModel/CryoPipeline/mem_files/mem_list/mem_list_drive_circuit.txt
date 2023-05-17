@@ -1,0 +1,14 @@
+inst_list_n2048_17b_0.mem
+inst_table_n128_34b_0.mem
+phase_memory_n40960_10b_0.mem
+amp_memory_n40960_8b_0.mem
+cali_memory_n16_36b_0.mem
+z_corr_memory_n16_384b_0.mem
+inst_list_n2048_17b_1.mem
+inst_table_n128_34b_1.mem
+phase_memory_n40960_10b_1.mem
+amp_memory_n40960_8b_1.mem
+cali_memory_n16_36b_1.mem
+z_corr_memory_n16_384b_1.mem
+cos_n1024_8b.mem
+sin_n1024_8b.mem

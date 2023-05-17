@@ -1,0 +1,265 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : readout_rx_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:23 2023
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /work/QIsim/device_model/cmos/CryoModel/CryoPipeline/freepdk-45nm/stdview/NangateOpenCellLibrary.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+readout_rx_circuit                     4.82e+03 2.77e+04 5.71e+05 3.31e+04 100.0
+  readout_rx_calibration_unit_instance (readout_rx_calibration_unit_IQ_CALI_WIDTH9_IQ_CALI_OUT_WIDTH8)
+                                        184.294  687.488 1.57e+04  887.527   2.7
+    q_alpha_beta_adder_instance (adder_signed_param_DATA_IN_WIDTH7_DATA_OUT_WIDTH8_TAKE_MSB1_0)
+                                         10.288    9.545  692.247   20.525   0.1
+    i_alpha_beta_adder_instance (adder_signed_param_DATA_IN_WIDTH7_DATA_OUT_WIDTH8_TAKE_MSB1_1)
+                                         10.079    9.473  692.141   20.244   0.1
+    q_beta_q_multiplier_instance (multiplier_signed_opt_param_DATA_IN_WIDTH10_DATA_OUT_WIDTH7_0)
+                                         19.190   24.045 2.03e+03   45.266   0.1
+    q_alpha_q_multiplier_instance (multiplier_signed_opt_param_DATA_IN_WIDTH10_DATA_OUT_WIDTH7_1)
+                                         19.803   24.893 2.05e+03   46.743   0.1
+    i_beta_i_multiplier_instance (multiplier_signed_opt_param_DATA_IN_WIDTH10_DATA_OUT_WIDTH7_2)
+                                         19.074   23.886 2.02e+03   44.978   0.1
+    i_alpha_i_multiplier_instance (multiplier_signed_opt_param_DATA_IN_WIDTH10_DATA_OUT_WIDTH7_3)
+                                         19.302   24.126 2.03e+03   45.459   0.1
+    q_dc_correction_adder (adder_signed_param_DATA_IN_WIDTH9_DATA_OUT_WIDTH10_TAKE_MSB1_0)
+                                         10.411   11.276  941.695   22.629   0.1
+    i_dc_correction_adder (adder_signed_param_DATA_IN_WIDTH9_DATA_OUT_WIDTH10_TAKE_MSB1_1)
+                                         10.385   11.361  942.533   22.689   0.1
+  genblk_rx_signal_decode[7].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_0)
+                                        520.185 3.19e+03 6.66e+04 3.78e+03  11.4
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_0)
+                                         67.618  515.994 1.86e+04  602.188   1.8
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_0)
+                                        100.082  685.007 8.88e+03  793.969   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_1)
+                                         99.036  686.770 8.88e+03  794.686   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_0)
+                                        192.926  188.700 1.67e+04  398.366   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_0)
+                                         22.471   24.132 1.61e+03   48.216   0.1
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_0)
+                                         23.041   22.128 1.75e+03   46.917   0.1
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_0)
+                                         45.486   45.701 3.87e+03   95.054   0.3
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_1)
+                                         33.878   32.458 3.20e+03   69.535   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_2)
+                                         36.498   34.766 3.44e+03   74.703   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_3)
+                                         31.552   29.515 2.87e+03   63.941   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_0)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_0)
+                                         18.630  518.166 8.99e+03  545.790   1.6
+  genblk_rx_signal_decode[6].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_1)
+                                        524.295 3.20e+03 6.69e+04 3.79e+03  11.5
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_1)
+                                         67.655  515.919 1.87e+04  602.229   1.8
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_2)
+                                         99.372  683.132 8.88e+03  791.381   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_3)
+                                         99.983  688.828 8.88e+03  797.693   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_1)
+                                        207.232  195.482 1.69e+04  419.649   1.3
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_1)
+                                         25.387   26.461 1.76e+03   53.603   0.2
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_1)
+                                         27.559   25.602 2.01e+03   55.175   0.2
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_4)
+                                         37.994   35.237 3.40e+03   76.630   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_5)
+                                         40.633   36.875 3.30e+03   80.804   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_6)
+                                         37.863   36.526 3.20e+03   77.588   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_7)
+                                         37.796   34.781 3.27e+03   75.850   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_1)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_1)
+                                         17.584  518.883 8.99e+03  545.458   1.6
+  genblk_rx_signal_decode[5].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_2)
+                                        524.594 3.19e+03 6.71e+04 3.78e+03  11.4
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_2)
+                                         70.838  518.393 1.92e+04  608.452   1.8
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_4)
+                                         99.522  684.245 8.88e+03  792.646   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_5)
+                                         99.392  686.711 8.88e+03  794.982   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_2)
+                                        200.657  188.058 1.67e+04  405.384   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_2)
+                                         26.578   25.185 1.86e+03   53.620   0.2
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_2)
+                                         27.811   25.966 2.04e+03   55.822   0.2
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_8)
+                                         35.654   35.979 3.12e+03   74.751   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_9)
+                                         35.609   32.283 3.29e+03   71.181   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_10)
+                                         38.670   34.448 3.21e+03   76.328   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_11)
+                                         36.335   34.198 3.15e+03   73.683   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_2)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_2)
+                                         18.571  516.510 8.96e+03  544.045   1.6
+  genblk_rx_signal_decode[4].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_3)
+                                        546.339 3.19e+03 6.58e+04 3.80e+03  11.5
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_3)
+                                         79.112  517.159 1.85e+04  614.772   1.9
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_6)
+                                         99.378  684.979 8.88e+03  793.237   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_7)
+                                        101.610  688.943 8.88e+03  799.435   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_3)
+                                        199.222  186.693 1.60e+04  401.914   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_3)
+                                         29.322   27.927 1.97e+03   59.222   0.2
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_3)
+                                         25.093   25.150 1.86e+03   52.103   0.2
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_12)
+                                         40.039   36.728 3.28e+03   80.048   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_13)
+                                         36.478   34.554 3.20e+03   74.231   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_14)
+                                         33.278   32.246 2.85e+03   68.369   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_15)
+                                         33.685   29.509 2.82e+03   66.013   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_3)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_3)
+                                         18.598  515.445 9.02e+03  543.060   1.6
+  genblk_rx_signal_decode[3].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_4)
+                                        527.510 3.19e+03 6.69e+04 3.78e+03  11.4
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_4)
+                                         70.668  516.666 1.89e+04  606.276   1.8
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_8)
+                                        101.473  685.502 8.88e+03  795.854   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_9)
+                                         99.945  685.673 8.88e+03  794.498   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_4)
+                                        201.977  191.300 1.66e+04  409.905   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_4)
+                                         23.719   25.896 1.72e+03   51.338   0.2
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_4)
+                                         26.165   25.566 2.08e+03   53.807   0.2
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_16)
+                                         39.211   34.902 3.28e+03   77.389   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_17)
+                                         35.882   33.300 3.26e+03   72.440   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_18)
+                                         33.366   34.508 3.04e+03   70.912   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_19)
+                                         35.276   32.281 3.04e+03   70.597   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_4)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_4)
+                                         18.557  516.818 9.03e+03  544.402   1.6
+  genblk_rx_signal_decode[2].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_5)
+                                        537.366 3.18e+03 6.64e+04 3.78e+03  11.4
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_5)
+                                         79.104  516.107 1.87e+04  613.919   1.9
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_10)
+                                        100.221  683.573 8.88e+03  792.671   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_11)
+                                        100.663  685.158 8.88e+03  794.700   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_5)
+                                        192.036  183.512 1.64e+04  391.951   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_5)
+                                         20.385   24.158 1.64e+03   46.180   0.1
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_5)
+                                         24.418   22.476 1.86e+03   48.755   0.1
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_20)
+                                         42.320   35.277 3.45e+03   81.044   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_21)
+                                         38.591   34.621 3.52e+03   76.732   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_22)
+                                         33.553   34.278 3.05e+03   70.882   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_23)
+                                         32.770   32.702 2.89e+03   68.358   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_5)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_5)
+                                         18.768  518.257 8.98e+03  546.005   1.6
+  genblk_rx_signal_decode[1].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_6)
+                                        519.857 3.22e+03 6.70e+04 3.81e+03  11.5
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_6)
+                                         67.109  538.414 1.87e+04  624.203   1.9
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_12)
+                                        100.158  684.695 8.88e+03  793.730   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_13)
+                                        100.613  685.968 8.88e+03  795.461   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_6)
+                                        199.132  199.613 1.68e+04  415.591   1.3
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_6)
+                                         22.574   24.187 1.70e+03   48.466   0.1
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_6)
+                                         25.473   24.887 1.96e+03   52.318   0.2
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_24)
+                                         39.783   37.510 3.47e+03   80.766   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_25)
+                                         38.631   41.647 3.39e+03   83.667   0.3
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_26)
+                                         36.483   36.053 3.18e+03   75.713   0.2
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_27)
+                                         36.188   35.330 3.14e+03   74.662   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_6)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_6)
+                                         18.113  517.319 9.16e+03  544.593   1.6
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_7)
+                                        532.573 3.19e+03 6.67e+04 3.79e+03  11.5
+    state_decision_unit_instance (readout_rx_state_decision_unit_baseline_DATA_WIDTH8_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_7)
+                                         69.891  519.081 1.90e+04  607.930   1.8
+    moving_average_filter_q (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_14)
+                                         99.143  685.038 8.88e+03  793.061   2.4
+    moving_average_filter_i (moving_average_filter_DATA_WIDTH8_NUM_OPERAND4_OPERAND_ADDR_WIDTH2_15)
+                                         99.505  686.440 8.88e+03  794.824   2.4
+    down_mixer_instance (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_7)
+                                        205.470  189.364 1.65e+04  411.325   1.2
+      q_subtractor (subtractor_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_7)
+                                         24.728   26.644 1.71e+03   53.081   0.2
+      i_adder (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_7)
+                                         22.783   23.642 1.79e+03   48.213   0.1
+      q1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_28)
+                                         36.681   33.161 2.91e+03   72.749   0.2
+      i1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_29)
+                                         37.015   33.987 3.29e+03   74.292   0.2
+      q1_q2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_30)
+                                         43.473   37.935 3.62e+03   85.025   0.3
+      i1_i2_multiplier (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_31)
+                                         35.020   33.138 3.11e+03   71.272   0.2
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_7)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_7)
+                                         18.458  515.949 8.96e+03  543.363   1.6
+  pc_0 (readout_rx_pc_PC_WIDTH5)          0.979   60.703  564.561   62.247   0.2
+1

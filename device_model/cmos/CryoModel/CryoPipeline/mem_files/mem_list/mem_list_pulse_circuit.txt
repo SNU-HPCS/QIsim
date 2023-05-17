@@ -1,0 +1,2 @@
+inst_list_n2048_35b.mem
+pulse_memory_n2048_284b.mem

@@ -1,0 +1,76 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : pulse_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:15 2023
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+  Startpoint: genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_length_counter_instance/length_count_reg/register_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/count_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_length_counter_instance/length_count_reg/register_reg[6]/CK (DFF_X1)
+                                                          0.00       0.00 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_length_counter_instance/length_count_reg/register_reg[6]/Q (DFF_X1)
+                                                          0.09       0.09 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_length_counter_instance/length_count_reg/rd_data[6] (ff_DATA_WIDTH7)
+                                                          0.00       0.09 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_length_counter_instance/cur_count_out[6] (pulse_length_counter_LENGTH_WIDTH7)
+                                                          0.00       0.09 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/U13/ZN (NOR4_X1)
+                                                          0.08 *     0.17 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/U14/ZN (NAND3_X1)
+                                                          0.03 *     0.19 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/U15/ZN (NOR2_X1)
+                                                          0.05 *     0.24 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/update_addr (pulse_amp_memory_addr_generator_DIRECTION_WIDTH2_AMP_MEMORY_ADDR_WIDTH9)
+                                                          0.00       0.24 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/en (counter_param_COUNT_WIDTH7)
+                                                          0.00       0.24 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U11/ZN (NOR2_X1)
+                                                          0.02 *     0.26 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U12/ZN (AOI21_X1)
+                                                          0.05 *     0.31 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U13/ZN (OAI21_X1)
+                                                          0.03 *     0.34 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U14/ZN (AOI21_X1)
+                                                          0.04 *     0.38 r
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U15/ZN (INV_X1)
+                                                          0.01 *     0.39 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/U16/Z (MUX2_X1)
+                                                          0.06 *     0.44 f
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/count_reg[6]/D (DFF_X1)
+                                                          0.00 *     0.44 f
+  data arrival time                                                  0.44
+
+  clock clk (rise edge)                                   0.58       0.58
+  clock network delay (ideal)                             0.00       0.58
+  genblk_pulse_circuit[0].pulse_amp_generator_instance/pulse_amp_memory_addr_generator_instance/amp_memory_addr_counter/count_reg[6]/CK (DFF_X1)
+                                                          0.00       0.58 r
+  library setup time                                     -0.04       0.54
+  data required time                                                 0.54
+  --------------------------------------------------------------------------
+  data required time                                                 0.54
+  data arrival time                                                 -0.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.09
+
+
+1

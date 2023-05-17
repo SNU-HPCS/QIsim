@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : readout_tx_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:27 2023
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+  Startpoint: genblk_tx_signal_gen[4].readout_tx_signal_gen_unit_instance/valid_sin_wave_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sin_wave_sum_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  genblk_tx_signal_gen[4].readout_tx_signal_gen_unit_instance/valid_sin_wave_reg/CK (DFF_X1)
+                                                          0.00       0.00 r
+  genblk_tx_signal_gen[4].readout_tx_signal_gen_unit_instance/valid_sin_wave_reg/Q (DFF_X1)
+                                                          0.11       0.11 r
+  genblk_tx_signal_gen[4].readout_tx_signal_gen_unit_instance/valid_sin_wave_out[0] (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_3)
+                                                          0.00       0.11 r
+  U532/Z (BUF_X1)                                         0.03 *     0.14 r
+  U533/ZN (AND2_X1)                                       0.04 *     0.18 r
+  U569/S (FA_X1)                                          0.10 *     0.28 f
+  U534/ZN (XNOR2_X2)                                      0.05 *     0.33 f
+  U587/Z (BUF_X1)                                         0.03 *     0.36 f
+  U588/ZN (INV_X1)                                        0.01 *     0.37 r
+  U590/ZN (NAND2_X1)                                      0.01 *     0.38 f
+  U591/ZN (NAND2_X2)                                      0.01 *     0.40 r
+  U593/ZN (NAND2_X2)                                      0.02 *     0.42 f
+  U594/ZN (NOR2_X4)                                       0.03 *     0.45 r
+  U599/ZN (OAI21_X2)                                      0.02 *     0.47 f
+  U600/ZN (INV_X2)                                        0.01 *     0.48 r
+  U601/ZN (OAI21_X2)                                      0.02 *     0.50 f
+  U615/ZN (XNOR2_X1)                                      0.04 *     0.54 f
+  sin_wave_sum_reg[9]/D (DFF_X1)                          0.00 *     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.58       0.58
+  clock network delay (ideal)                             0.00       0.58
+  sin_wave_sum_reg[9]/CK (DFF_X1)                         0.00       0.58 r
+  library setup time                                     -0.04       0.54
+  data required time                                                 0.54
+  --------------------------------------------------------------------------
+  data required time                                                 0.54
+  data arrival time                                                 -0.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

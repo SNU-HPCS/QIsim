@@ -1,0 +1,12 @@
+read_verilog ../yosys_verilog/mux_param.v
+read_verilog -lib sfq_cells.v
+
+synth
+dfflibmap -liberty sfq_cells.lib
+abc -liberty sfq_cells.lib
+
+stat -liberty sfq_cells.lib
+
+show
+
+write_verilog ../synth_vlg/synth_mux_param.v

@@ -1,0 +1,5 @@
+Name,static_4k,dynamic_4k,static_1k,dynamic_1k,static_100mk,dynamic_100mk,static_20mk,dynamic_20mk
+coaxial_cable,1000000,7900,4000,0,400,7.9,13,0.79
+microstrip,315000,7900,3700,0,210,7.9,4.3,0.79
+photonic_link,250,0,0,0,0.1,0,0.003,790
+superconducting_microstrip,0,0,0,0,0.1,7.9,0.003,0.79

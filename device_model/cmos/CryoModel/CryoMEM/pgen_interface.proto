@@ -1,0 +1,45 @@
+syntax = "proto2";
+
+message PgenInput{
+    required int32 mode = 1;
+    required int32 temperature = 2;
+    required int32 node = 3;
+    optional double Vdd = 4;
+    optional double Vth = 5;
+}
+
+message PgenOutput{
+    message UserInput{
+        required int32 temperature = 1;     // [K]
+        required int32 technology_node = 2; // [nm]
+        required int32 mode = 3;
+        required double Vdd = 4;            // [V]
+        required double Vth0 = 5;           // [V]
+    }
+
+    message OutputParameter{
+        message Mosfet{
+            required double Vdd = 1;    // [V]
+            required double Vth0 = 2;    // [V]
+            required double Vth_on = 3;  // [V]
+            required double Vth_off = 4; // [V]
+            required double Ion = 5;     // [A/um]
+            required double Isub = 6;    // [A/um]
+            required double Igate = 7;   // [A/um]
+        }
+
+        message Wire{
+            required double Resistivity = 1;
+        }
+
+        required Mosfet nmos = 1;
+        required Mosfet nmos_ref = 2;
+        required Mosfet pmos = 3;
+        required Mosfet pmos_ref = 4;
+        required Wire wire = 5;
+        required Wire wire_ref = 6;
+    }
+
+    required UserInput user_input = 1;
+    required OutputParameter output_parameter = 2;
+}

@@ -1,0 +1,52 @@
+library(RSFQ) {
+  cell(BUFFT_RSFQ) {
+    area: 6;
+    pin(A) { direction: input; }
+    pin(Q) { direction: output;
+              function: "A"; }
+  }
+  cell(NOTT_RSFQ) {
+    area: 3;
+    pin(A) { direction: input; }
+    pin(Q) { direction: output;
+              function: "A'"; }
+  }
+  cell(ANDT_RSFQ) {
+    area: 4;
+    pin(A) { direction: input; }
+    pin(B) { direction: input; }
+    pin(Q) { direction: output;
+             function: "(A*B)"; }
+  }
+  cell(ORT_RSFQ) {
+    area: 4;
+    pin(A) { direction: input; }
+    pin(B) { direction: input; }
+    pin(Q) { direction: output;
+             function: "(A+B)"; }
+  }
+  cell(XORT_RSFQ) {
+    area: 4;
+    pin(A) { direction: input; }
+    pin(B) { direction: input; }
+    pin(Q) { direction: output;
+             function: "(A *B') + (A' * B)"; }
+  }
+   cell(XNORT_RSFQ) {
+    area: 4;
+    pin(A) { direction: input; }
+    pin(B) { direction: input; }
+    pin(Q) { direction: output;
+             function: "((A *B') + (A' * B))'"; }
+  }
+  cell(DFFT_RSFQ) {
+    area: 18;
+    ff(IQ, IQN) { clocked_on: C;
+                  next_state: A; }
+    pin(C) { direction: input;
+                 clock: true; }
+    pin(A) { direction: input; }
+    pin(Q) { direction: output;
+              function: "IQ"; }
+  }
+}

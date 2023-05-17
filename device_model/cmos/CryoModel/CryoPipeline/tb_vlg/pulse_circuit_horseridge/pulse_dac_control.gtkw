@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sun Jul 24 11:29:35 2022
+[*]
+[dumpfile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/pulse_circuit/pulse_dac_control.vcd"
+[dumpfile_mtime] "Sun Jul 24 11:27:42 2022"
+[dumpfile_size] 31377
+[savefile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/pulse_circuit/pulse_dac_control.gtkw"
+[timestart] 0
+[size] 3840 2081
+[pos] -1 -1
+*-15.739189 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] pulse_dac_control_tb.
+[treeopen] pulse_dac_control_tb.UUT.
+[sst_width] 340
+[signals_width] 340
+[sst_expanded] 1
+[sst_vpaned_height] 668
+@200
+-Top module
+@420
+pulse_dac_control_tb.I
+pulse_dac_control_tb.WAIT_DURATION
+@28
+pulse_dac_control_tb.clk
+@22
+pulse_dac_control_tb.dc_value_in[263:0]
+pulse_dac_control_tb.dc_value_out[263:0]
+pulse_dac_control_tb.default_dc_value_wr_data[263:0]
+@28
+pulse_dac_control_tb.default_dc_value_wr_en
+@22
+pulse_dac_control_tb.length_in[19:0]
+@28
+pulse_dac_control_tb.rst
+pulse_dac_control_tb.valid_dc_value_in
+pulse_dac_control_tb.valid_dc_value_out
+@200
+-
+-pulse_dac_control
+-input
+@28
+pulse_dac_control_tb.UUT.valid_dc_value_in
+@22
+pulse_dac_control_tb.UUT.dc_value_in[263:0]
+pulse_dac_control_tb.UUT.length_in[19:0]
+@200
+-input latch
+@28
+pulse_dac_control_tb.UUT.valid_dc_value
+@22
+pulse_dac_control_tb.UUT.dc_value[263:0]
+pulse_dac_control_tb.UUT.length[19:0]
+@200
+-counter
+@22
+pulse_dac_control_tb.UUT.cur_time[19:0]
+pulse_dac_control_tb.UUT.next_time[19:0]
+@200
+-output
+@22
+pulse_dac_control_tb.UUT.dc_value_out[263:0]
+@28
+pulse_dac_control_tb.UUT.valid_dc_value_out
+[pattern_trace] 1
+[pattern_trace] 0

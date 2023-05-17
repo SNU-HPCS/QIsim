@@ -1,0 +1,514 @@
+.model jjud jj(rtype=0,vg=2.4m,delv=0.08m,icrit=1u,cap=5f)
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.1mA)
+*.temp 0.01
+
+
+* Circuit.
+I1 0 32 pwl(0 0 0p 0 5p -0.2u)
+I2 0 33 pwl(0 0 0p 0 5p 1.1u)
+
+I3 0 1 pwl(0 0 0p 0 100p 600u  200p 0)
+X0 1 2 LSmitll_DCSFQ
+
+X1 2 3 4 LSmitll_SPLIT
+X2 3 0 5 LSmitll_MERGE
+X3 4 0 6 LSmitll_MERGE
+
+X4 5 7 JTLA
+X5 7 8 JTLA
+X6 8 9 JTLA
+X7 9 10 JTLA
+X8 10 11 JTLA
+
+X9 11 12 32 JTLM
+
+X10 12 13 JTLA
+X11 13 14 JTLA
+X12 14 15 JTLA
+X13 15 16 JTLA
+X14 16 17 JTLB
+X15 17 18 LSMITLL_JTL
+
+X16 6 19 JTLA
+X17 19 20 JTLA
+X18 20 21 JTLA
+X19 21 22 JTLA
+X20 22 23 JTLA
+
+X21 23 24 33 JTLM
+
+X22 24 25 JTLA
+X23 25 26 JTLA
+X24 26 27 JTLA
+X25 27 28 JTLA
+X26 28 29 JTLB
+X27 29 30 LSMITLL_JTL
+
+X31 18 30 31 LSmitll_DFF_LC2
+IRres1               31         0  NOISE(0.928961p 0.0 1.0p) 
+Rres1	31	0	1.28
+
+
+* Control command.
+.print v(2) v(18) v(30) v(31)
+.tran .5p 10000p
+
+
+
+* Module declaration.
+.subckt LSmitll_DCSFQ a q
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.1mA)
+IB0                3         4  NOISE(0.382357p 0.0 1.0p) 
+B0 3 4 jjmit area=2.25
+IB1                5         10  NOISE(0.382357p 0.0 1.0p) 
+B1 5 10 jjmit area=2.25
+IB2                6         12  NOISE(0.403040p 0.0 1.0p) 
+B2 6 12 jjmit area=2.5
+I0 0 7 pwl(0 0 5p 275u)
+I1 0 8 pwl(0 0 5p 175u)
+L0 7 4 0.2p
+L1 8 6 0.2p
+L2 a 9 1p
+L3 9 3 0.6p
+L4 4 5 1.1p
+L5 5 6 4.5p
+L6 6 q 2p
+L7 9 0 3.9p
+L8 14 4 1p
+L9 10 0 0.2p
+L10 11 0 1p
+L11 12 0 0.2p
+L12 13 0 1p
+IR0               5         11  NOISE(0.601914p 0.0 1.0p) 
+R0 5 11 3.048846408
+IR1               6         13  NOISE(0.634474p 0.0 1.0p) 
+R1 6 13 2.743961767
+IR2               3         14  NOISE(0.601914p 0.0 1.0p) 
+R2 3 14 3.048846408
+.ends LSmitll_DCSFQ
+
+
+.subckt LSmitll_SPLIT a q0 q1
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.1mA)
+.param Phi0=2.067833848E-15
+.param B0=1
+.param Ic0=0.0001
+.param IcRs=100u*6.859904418
+.param B0Rs=IcRs/Ic0*B0
+.param Rsheet=2 
+.param Lsheet=1.13e-12 
+.param LP=0.2p
+.param IC=2.5
+.param Lptl=2p
+.param LB=2p
+.param BiasCoef=0.7
+.param RD=1.36
+
+.param B1=2.5
+.param B2=3.0
+.param B3=2.5
+.param B4=2.5
+
+.param IB1=175u
+.param IB2=280u
+.param IB3=175u
+.param IB4=175u
+
+.param L1=Lptl
+.param L2=Phi0/(2*B1*Ic0)
+.param L3=(Phi0/(2*B2*Ic0))/2
+.param L4=L3
+.param L5=Lptl
+.param L6=L3
+.param L7=Lptl
+
+.param RB1=B0Rs/B1
+.param RB2=B0Rs/B2
+.param RB3=B0Rs/B3
+.param RB4=B0Rs/B4
+.param LRB1=(RB1/Rsheet)*Lsheet
+.param LRB2=(RB2/Rsheet)*Lsheet
+.param LRB3=(RB3/Rsheet)*Lsheet
+.param LRB4=(RB4/Rsheet)*Lsheet
+
+I1 0 3 pwl(0 0 5p IB1)
+I2 0 6 pwl(0 0 5p IB2)
+I3 0 10 pwl(0 0 5p IB3)
+I4 0 13 pwl(0 0 5p IB4)
+LB1 3 1 9.175E-13
+LB2 6 4 7.666E-13
+LB3 10 8 1.928E-12
+LB4 13 11 8.786E-13
+
+IB1                1         2  NOISE(0.403040p 0.0 1.0p) 
+B1 1 2 jjmit area=2.5
+IB2                4         5  NOISE(0.441508p 0.0 1.0p) 
+B2 4 5 jjmit area=3.0
+IB3                8         9  NOISE(0.403040p 0.0 1.0p) 
+B3 8 9 jjmit area=2.5
+IB4                11         12  NOISE(0.403040p 0.0 1.0p) 
+B4 11 12 jjmit area=2.5
+L1 a 1 2.063E-12
+L2 1 4 3.637E-12
+L3 4 7 1.278E-12
+L4 7 8 1.305E-12
+L5 8 q0 2.05E-12
+L6 7 11 1.315E-12
+L7 11 q1 2.06E-12
+
+LP1 2 0 4.676E-13
+LP2 5 0 4.498E-13
+LP3 9 0 5.183E-13
+LP4 12 0 4.639E-13
+IRB1               1         101  NOISE(0.634474p 0.0 1.0p) 
+RB1 1 101 2.7439617672
+LRB1 101 0 LRB1
+IRB2               4         104  NOISE(0.695031p 0.0 1.0p) 
+RB2 4 104 2.286634806
+LRB2 104 0 LRB2
+IRB3               8         108  NOISE(0.634474p 0.0 1.0p) 
+RB3 8 108 2.7439617672
+LRB3 108 0 LRB3
+IRB4               11         111  NOISE(0.634474p 0.0 1.0p) 
+RB4 11 111 2.7439617672
+LRB4 111 0 LRB4
+.ends
+
+
+.subckt LSmitll_MERGE a b q
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.1mA)
+.param Phi0=2.067833848E-15
+.param B0=1
+.param Ic0=0.0001
+.param IcRs=100u*6.859904418
+.param B0Rs=IcRs/Ic0*B0
+.param Rsheet=2 
+.param Lsheet=1.13e-12 
+.param LP=0.2p
+.param IC=2.5
+.param LB=2p
+.param BiasCoef=0.70
+.param RD=1.36
+
+.param B1=IC
+.param B2=2.5
+.param B3=1.92
+.param B4=B1
+.param B5=B2
+.param B6=B3
+.param B7=2.53
+.param B8=IC
+
+.param IB1=BiasCoef*Ic0*B1
+.param IB2=IB1
+.param IB3=254E-6
+.param IB4=192E-6
+.param IB5=BiasCoef*Ic0*B8
+
+.param L1=Phi0/(4*IC*Ic0)
+.param L2=3.173E-12
+.param L3=1.2E-12
+.param L4=L1
+.param L5=L2
+.param L6=L3
+.param L7=5.354E-12
+.param L8=4.456E-12
+.param L9=Phi0/(4*B8*Ic0)
+
+.param LB1=LB
+.param LB2=LB
+.param LB3=LB
+.param LB4=LB
+.param LB5=LB
+
+.param LP1=LP
+.param LP2=LP
+.param LP4=LP
+.param LP5=LP
+.param LP7=LP
+.param LP8=LP
+
+.param RB1=B0Rs/B1
+.param RB2=B0Rs/B2
+.param RB3=B0Rs/B3
+.param RB4=B0Rs/B4
+.param RB5=B0Rs/B5
+.param RB6=B0Rs/B6
+.param RB7=B0Rs/B7
+.param RB8=B0Rs/B8
+.param LRB1=(RB1/Rsheet)*Lsheet
+.param LRB2=(RB2/Rsheet)*Lsheet
+.param LRB3=(RB3/Rsheet)*Lsheet
+.param LRB4=(RB4/Rsheet)*Lsheet
+.param LRB5=(RB5/Rsheet)*Lsheet
+.param LRB6=(RB6/Rsheet)*Lsheet
+.param LRB7=(RB7/Rsheet)*Lsheet
+.param LRB8=(RB8/Rsheet)*Lsheet
+
+IB1                1         2  NOISE(0.403040p 0.0 1.0p) 
+B1 1 2 jjmit area=2.5
+IB2                4         5  NOISE(0.403040p 0.0 1.0p) 
+B2 4 5 jjmit area=2.5
+IB3                4         6  NOISE(0.353206p 0.0 1.0p) 
+B3 4 6 jjmit area=1.92
+IB4                8         9  NOISE(0.403040p 0.0 1.0p) 
+B4 8 9 jjmit area=2.5
+IB5                11         12  NOISE(0.403040p 0.0 1.0p) 
+B5 11 12 jjmit area=2.5
+IB6                11         13  NOISE(0.353206p 0.0 1.0p) 
+B6 11 13 jjmit area=1.92
+IB7                15         16  NOISE(0.405451p 0.0 1.0p) 
+B7 15 16 jjmit area=2.53
+IB8                18         19  NOISE(0.403040p 0.0 1.0p) 
+B8 18 19 jjmit area=2.5
+
+I1 0 3 pwl(0 0 5p IB1)
+I2 0 10 pwl(0 0 5p IB2)
+I3 0 14 pwl(0 0 5p IB3)
+I4 0 17 pwl(0 0 5p IB4)
+I5 0 20 pwl(0 0 5p IB5)
+
+L1 a 1 2.117E-12
+L2 1 4 3.17E-12
+L3 6 7 1.234E-12
+L4 b 8 2.082E-12
+L5 8 11 3.165E-12
+L6 13 7 1.224E-12
+L7 7 15 5.299E-12
+L8 15 18 4.489E-12
+L9 18 q 2.077E-12
+
+LP1 2 0 4.652E-13
+LP2 5 0 4.457E-13
+LP4 9 0 5.293E-13
+LP5 12 0 4.452E-13
+LP7 16 0 5.039E-13
+LP8 19 0 4.984E-13
+
+LB1 1 3 LB1
+LB2 8 10 LB2
+LB3 7 14 LB3
+LB4 15 17 LB4
+LB5 18 20 LB5
+
+IRB1               1         101  NOISE(0.634474p 0.0 1.0p) 
+RB1 1 101 2.7439617672
+LRB1 101 0 LRB1
+IRB2               4         104  NOISE(0.634474p 0.0 1.0p) 
+RB2 4 104 2.7439617672
+LRB2 104 0 LRB2
+IRB3               4         106  NOISE(0.556025p 0.0 1.0p) 
+RB3 4 106 3.572866884375
+LRB3 106 6 LRB3
+IRB4               8         108  NOISE(0.634474p 0.0 1.0p) 
+RB4 8 108 2.7439617672
+LRB4 108 0 LRB4
+IRB5               11         111  NOISE(0.634474p 0.0 1.0p) 
+RB5 11 111 2.7439617672
+LRB5 111 0 LRB5
+IRB6               11         113  NOISE(0.556025p 0.0 1.0p) 
+RB6 11 113 3.572866884375
+LRB6 113 13 LRB6
+IRB7               15         115  NOISE(0.638269p 0.0 1.0p) 
+RB7 15 115 2.7114246711462450592885375494071
+LRB7 115 0 LRB7
+IRB8               18         118  NOISE(0.634474p 0.0 1.0p) 
+RB8 18 118 2.7439617672
+LRB8 118 0 LRB8
+.ends
+
+
+.subckt JTLA IN OUT
+IB0                OUT         0  NOISE(0.360490p 0.0 1.0p) 
+B0 OUT 0 jjud area=2
+I0 0 OUT pwl (0 0 5p 0.00212u)
+L0 IN OUT 39p
+.ends JTLA
+
+.subckt JTLM IN OUT BIAS
+IB0                OUT         0  NOISE(0.360490p 0.0 1.0p) 
+B0 OUT 0 jjud area=2
+I0 0 OUT pwl (0 0 5p 0.00212u)
+L0 IN OUT 39p
+L1 BIAS 0 20.7p
+K0 L0 L1 0.41
+.ends JTLM
+
+.subckt JTLB IN OUT
+IB0                OUT         0  NOISE(0.360490p 0.0 1.0p) 
+B0 OUT 0 jjud area=2
+I0 0 OUT pwl (0 0 5p 0.5u)
+L0 IN OUT 39p
+.ends JTLB
+
+.subckt LSMITLL_JTL a q
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.00212mA)
+.param Phi0=2.067833848E-15
+.param B0=1
+.param Ic0=0.00000212
+.param IcRs=100u*6.859904418
+.param B0Rs=IcRs/Ic0*B0
+.param Rsheet=2 
+.param Lsheet=1.13e-12 
+.param LP=0.2p
+.param IC=2.5
+.param LB=2p
+.param BiasCoef=0.7
+
+.param B1=IC
+.param B2=IC
+.param IB1=(B1+B2)*Ic0*BiasCoef
+.param LB1=LB
+.param L1=Phi0/(4*B1*Ic0)
+.param L2=Phi0/(4*B1*Ic0)
+.param L3=Phi0/(4*B1*Ic0)
+.param L4=Phi0/(4*B2*Ic0)
+.param RB1=B0Rs/B1   
+.param RB2=B0Rs/B2
+.param LRB1=(RB1/Rsheet)*Lsheet+LP
+.param LRB2=(RB2/Rsheet)*Lsheet+LP
+.param LP1=LP
+.param LP2=LP
+
+IB1                1         2  NOISE(0.403040p 0.0 1.0p) 
+B1 1 2 jjmit area=2.5
+IB2                6         7  NOISE(0.403040p 0.0 1.0p) 
+B2 6 7 jjmit area=2.5
+I1 0 5 pwl(0 0 5p IB1)
+L1 a 1 L1
+L2 1 4 L2
+L3 4 6 L3
+L4 6 q L4
+LP1 2 0 LP1
+LP2 7 0 LP2
+LB1 5 4 LB1
+IRB1               1         3  NOISE(0.092381p 0.0 1.0p) 
+RB1 1 3 129.43215883018867924528301886792
+IRB2               6         8  NOISE(0.092381p 0.0 1.0p) 
+RB2 6 8 129.43215883018867924528301886792
+LRB1 3 0 LRB1
+LRB2 8 0 LRB2
+.ends
+
+
+.subckt LSmitll_DFF_LC2	  a	clk q	
+.model jjmit jj(rtype=1, vg=2.8mV, cap=0.07pF, r0=160, rn=16, icrit=0.00212mA)
+.param Phi0=2.067833848E-15
+.param B0=1
+.param Ic0=0.00212m
+.param IcRs=100u*6.859904418
+.param B0Rs=IcRs/Ic0*B0
+.param Rsheet=2 
+.param Lsheet=1.13e-12 
+.param LP=0.2p
+.param IC=2.5
+.param LB=2p
+.param BiasCoef=0.70
+
+.param B1=IC
+.param B2=IC/1.4
+.param B3=IC
+.param B4=IC
+.param B5=IC/1.4
+.param B6=IC
+.param B7=IC
+
+.param IB1=BiasCoef*Ic0*B1         
+.param IB2=Ic0*Ic          
+.param IB3=BiasCoef*Ic0*B6             
+.param IB4=BiasCoef*Ic0*B7         
+
+.param L1=Phi0/(4*IC*Ic0)               
+.param L2=Phi0/(2*B1*Ic0)         
+.param L3=Phi0/(B3*Ic0)       
+.param L4=Phi0/(2*B6*Ic0)      
+.param L5=Phi0/(4*IC*Ic0)     
+.param L6=Phi0/(2*B4*Ic0)       
+.param L7=Phi0/(4*B7*Ic0)         
+.param LB1=LB           
+.param LB2=LB          
+.param LB3=LB           
+.param LB4=LB         
+.param LP1=LP         
+.param LP3=LP          
+.param LP4=LP         
+.param LP6=LP          
+.param LP7=LP          
+.param RB1=B0Rs/B1       
+.param RB2=B0Rs/B2       
+.param RB3=B0Rs/B3          
+.param RB4=B0Rs/B4         
+.param RB5=B0Rs/B5         
+.param RB6=B0Rs/B6          
+.param RB7=B0Rs/B7
+.param LRB1=(RB1/Rsheet)*Lsheet
+.param LRB2=(RB2/Rsheet)*Lsheet
+.param LRB3=(RB3/Rsheet)*Lsheet
+.param LRB4=(RB4/Rsheet)*Lsheet
+.param LRB5=(RB5/Rsheet)*Lsheet
+.param LRB6=(RB6/Rsheet)*Lsheet
+.param LRB7=(RB7/Rsheet)*Lsheet
+
+IB1                1         2  NOISE(0.403040p 0.0 1.0p) 
+B1 1 2 jjmit area=2.5
+IB2                4         5  NOISE(0.340631p 0.0 1.0p) 
+B2 4 5 jjmit area=1.7857142857142857142857142857143
+IB3                5         6  NOISE(0.403040p 0.0 1.0p) 
+B3 5 6 jjmit area=2.5
+IB4                8         9  NOISE(0.403040p 0.0 1.0p) 
+B4 8 9 jjmit area=2.5
+IB5                10         8  NOISE(0.340631p 0.0 1.0p) 
+B5 10 8 jjmit area=1.7857142857142857142857142857143
+IB6                11         12  NOISE(0.403040p 0.0 1.0p) 
+B6 11 12 jjmit area=2.5
+IB7                14         15  NOISE(0.403040p 0.0 1.0p) 
+B7 14 15 jjmit area=2.5
+
+I1 0 3 pwl(0 0 5p IB1)
+I2 0 7 pwl(0 0 5p IB2)
+I3 0 13 pwl(0 0 5p IB3)
+I4 0 16 pwl(0 0 5p IB4)
+
+LB1 3 1 LB1
+LB2 7 5 LB2
+LB3 11 13 LB3
+LB4 16 14 LB4
+
+L1 a 1 L1
+L2 1 4 L2
+L3 5 8 L3
+L4 10 11 L4
+L5 clk 11 L5
+L6 8 14 L6
+L7 14 q L7
+
+LP1 2 0 LP1    
+LP3 6 0 LP3    
+LP4 9 0 LP4    
+LP6 12 0 LP6    
+LP7 15 0 LP7    
+
+IRB1               1         101  NOISE(0.092381p 0.0 1.0p) 
+RB1 1 101 129.43215883018867924528301886792
+LRB1 101 0 LRB1
+IRB2               4         104  NOISE(0.078076p 0.0 1.0p) 
+RB2 4 104 181.20502236226415094339622641509
+LRB2 104 5 LRB2
+IRB3               5         105  NOISE(0.092381p 0.0 1.0p) 
+RB3 5 105 129.43215883018867924528301886792
+LRB3 105 0 LRB3
+IRB4               8         108  NOISE(0.092381p 0.0 1.0p) 
+RB4 8 108 129.43215883018867924528301886792
+LRB4 108 0 LRB4
+IRB5               10         110  NOISE(0.078076p 0.0 1.0p) 
+RB5 10 110 181.20502236226415094339622641509
+LRB5 110 8 LRB5
+IRB6               11         111  NOISE(0.092381p 0.0 1.0p) 
+RB6 11 111 129.43215883018867924528301886792
+LRB6 111 0 LRB6
+IRB7               14         114  NOISE(0.092381p 0.0 1.0p) 
+RB7 14 114 129.43215883018867924528301886792
+LRB7 114 0 LRB7
+.ends
+
+.end

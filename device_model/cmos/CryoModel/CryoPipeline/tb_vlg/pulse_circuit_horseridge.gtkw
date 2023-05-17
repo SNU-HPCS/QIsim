@@ -1,0 +1,117 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Fri Aug  5 09:22:04 2022
+[*]
+[dumpfile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/pulse_circuit.vcd"
+[dumpfile_mtime] "Fri Aug  5 09:21:00 2022"
+[dumpfile_size] 383227
+[savefile] "/home/junpyo/cryo/QIsim/QIsim/device_model/cmos/tb_vlg/pulse_circuit.gtkw"
+[timestart] 0
+[size] 3840 2081
+[pos] 1800 515
+*-22.759212 43510000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] pulse_circuit_tb.
+[treeopen] pulse_circuit_tb.UUT.
+[treeopen] pulse_circuit_tb.UUT.pulse_dac_control_instance.
+[sst_width] 386
+[signals_width] 517
+[sst_expanded] 1
+[sst_vpaned_height] 668
+@200
+-top module
+@28
+pulse_circuit_tb.rst
+@24
+pulse_circuit_tb.I
+@28
+pulse_circuit_tb.clk
+@22
+pulse_circuit_tb.glb_counter[23:0]
+@200
+-initialize memory/value
+@22
+pulse_circuit_tb.dc_value_out[263:0]
+pulse_circuit_tb.default_dc_value_wr_data[263:0]
+@28
+pulse_circuit_tb.default_dc_value_wr_en
+@200
+-
+@22
+pulse_circuit_tb.inst_list_wr_addr[10:0]
+pulse_circuit_tb.inst_list_wr_data[34:0]
+@28
+pulse_circuit_tb.inst_list_wr_en
+@200
+-
+@22
+pulse_circuit_tb.pulse_memory_wr_addr[8:0]
+pulse_circuit_tb.pulse_memory_wr_data[283:0]
+@28
+pulse_circuit_tb.pulse_memory_wr_en
+@200
+-
+@28
+pulse_circuit_tb.pulse_memory_wr_sel[1:0]
+pulse_circuit_tb.valid_dc_value_out
+@200
+-
+-pulse_circuit
+@22
+pulse_circuit_tb.UUT.PC[10:0]
+@28
+pulse_circuit_tb.UUT.update_pc
+@22
+pulse_circuit_tb.UUT.inst_list_rd_addr[10:0]
+pulse_circuit_tb.UUT.inst_list_rd_data[34:0]
+@200
+-
+@28
+pulse_circuit_tb.UUT.valid_inst_list
+@22
+pulse_circuit_tb.UUT.addr[10:0]
+@28
+pulse_circuit_tb.UUT.valid_dc_value
+@200
+-
+@28
+pulse_circuit_tb.UUT.pulse_memory_mux_sel[1:0]
+@22
+pulse_circuit_tb.UUT.pulse_memory_mux_data_out[283:0]
+@200
+-
+@22
+pulse_circuit_tb.UUT.dc_value[263:0]
+pulse_circuit_tb.UUT.length[19:0]
+@200
+-
+-pulse_dac_control
+@22
+pulse_circuit_tb.UUT.pulse_dac_control_instance.default_dc_value[263:0]
+@200
+-
+@22
+pulse_circuit_tb.UUT.pulse_dac_control_instance.dc_value_in[263:0]
+pulse_circuit_tb.UUT.pulse_dac_control_instance.length_in[19:0]
+@28
+pulse_circuit_tb.UUT.pulse_dac_control_instance.valid_dc_value_in
+@200
+-
+@28
+pulse_circuit_tb.UUT.pulse_dac_control_instance.valid_dc_value
+@200
+-
+@28
+pulse_circuit_tb.UUT.pulse_dac_control_instance.valid_dc_value_out
+@22
+pulse_circuit_tb.UUT.pulse_dac_control_instance.dc_value_out[263:0]
+@200
+-
+-pulse_counter
+@28
+pulse_circuit_tb.UUT.pulse_dac_control_instance.pulse_counter_instance.valid_length
+@8022
+pulse_circuit_tb.UUT.pulse_dac_control_instance.pulse_counter_instance.cur_time[19:0]
+@22
+pulse_circuit_tb.UUT.pulse_dac_control_instance.pulse_counter_instance.length[19:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,87 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : readout_tx_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:27 2023
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /work/QIsim/device_model/cmos/CryoModel/CryoPipeline/freepdk-45nm/stdview/NangateOpenCellLibrary.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+readout_tx_circuit                      178.698 6.62e+03 1.11e+05 6.91e+03 100.0
+  genblk_tx_signal_gen[7].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_0)
+                                         19.739  725.137 1.07e+04  755.551  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_0)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_0)
+                                         18.552  517.426 8.93e+03  544.904   7.9
+  genblk_tx_signal_gen[6].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_1)
+                                         20.025  725.280 1.07e+04  756.023  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_1)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_1)
+                                         18.641  517.508 8.97e+03  545.118   7.9
+  genblk_tx_signal_gen[5].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_2)
+                                         19.539  727.984 1.06e+04  758.155  11.0
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_2)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_2)
+                                         18.340  520.257 8.88e+03  547.479   7.9
+  genblk_tx_signal_gen[4].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_3)
+                                         19.801  726.222 1.06e+04  756.658  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_3)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_3)
+                                         18.356  518.549 8.88e+03  545.790   7.9
+  genblk_tx_signal_gen[3].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_4)
+                                         19.688  724.829 1.07e+04  755.235  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_4)
+                                       4.18e-03 1.27e-02  203.315    0.220   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_4)
+                                         18.510  517.830 8.97e+03  545.308   7.9
+  genblk_tx_signal_gen[2].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_5)
+                                         18.991  725.486 1.07e+04  755.158  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_5)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_5)
+                                         17.919  517.816 8.93e+03  544.667   7.9
+  genblk_tx_signal_gen[1].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_6)
+                                         19.069  725.511 1.07e+04  755.254  10.9
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_6)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_6)
+                                         17.950  517.768 8.93e+03  544.643   7.9
+  genblk_tx_signal_gen[0].readout_tx_signal_gen_unit_instance (readout_tx_signal_gen_unit_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_7)
+                                         19.701  727.193 1.07e+04  757.572  11.0
+    nco_mux (mux_param_NUM_INPUT2_SEL_WIDTH1_DATA_WIDTH10_7)
+                                          0.000    0.000  203.244    0.203   0.0
+    nco_instance (nco_no_z_corr_N22_OUTPUT_WIDTH10_7)
+                                         17.958  519.390 8.93e+03  546.277   7.9
+  pc_0 (readout_tx_pc_PC_WIDTH5)          0.937   60.608  574.699   62.119   0.9
+1

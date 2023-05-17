@@ -1,0 +1,21 @@
+# This is awk file to modify netlist
+#
+# To simulate other Temp change 4.2(K) to other value.
+#
+# Usage:
+# awk -f noise.awkf circuit.inp > circuit_noise.inp
+
+# Attach noise current source to resistance in parallel if label is "R"(resisntance)
+
+BEGIN {const=5.523e-23}
+$1 ~ /^[rR]/{
+noise = sqrt(const*0.02/$4)*1e12
+printf "I%s               %s         %s  NOISE(%fp 0.0 1.0p) \n",$1,$2,$3,noise}
+
+# Attach noise current to resisntance of JJ (Subgap Resistance) 
+$1 ~ /^[pP]/||/^[bB]/{
+area = substr($5,6)
+noise2 = sqrt(const*0.02/(17/area))*1e12
+printf "I%s                %s         %s  NOISE(%fp 0.0 1.0p) \n",$1,$2,$3,noise2}
+
+$1 ~ !/^[rR]/||!/^[bB]/||!/^[pP]/ {print $0}

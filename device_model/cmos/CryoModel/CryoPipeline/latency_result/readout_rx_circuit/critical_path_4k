@@ -1,0 +1,91 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'readout_rx_circuit' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : readout_rx_circuit
+Version: P-2019.03
+Date   : Wed May 17 14:05:21 2023
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: Inactive.
+
+  Startpoint: i_after_cali_reg[7]_rep1
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/i_mixer_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i_after_cali_reg[7]_rep1/CK (DFF_X1)                    0.00 #     0.00 r
+  i_after_cali_reg[7]_rep1/Q (DFF_X1)                     0.09       0.09 r
+  U507/ZN (INV_X4)                                        0.02 *     0.11 f
+  U508/ZN (INV_X16)                                       0.05 *     0.16 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/IN8 (readout_rx_signal_decode_unit_INPUT_IQ_WIDTH8_NCO_N22_PHASE_WIDTH10_SIN_LUT_NUM_ENTRY1024_SIN_LUT_ADDR_WIDTH10_SIN_LUT_DATA_WIDTH8_AVG_FILTER_NUM_OPERAND4_AVG_FILTER_OPERAND_ADDR_WIDTH2_NUM_THRESHOLD128_BIN_COUNTER_WIDTH16_BIN_COUNT_MEM_NUM_ENTRY65536_BIN_COUNT_MEM_ADDR_WIDTH16_BIN_COUNT_MEM_DATA_WIDTH16_STATE_DECISION_DATA_WIDTH256_STATE_DECISION_ADDR_WIDTH8_7)
+                                                          0.00       0.16 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/IN8 (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_7)
+                                                          0.00       0.16 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/IN1 (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_31)
+                                                          0.00       0.16 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U3/ZN (XNOR2_X1)
+                                                          0.05 *     0.21 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U12/ZN (NAND3_X1)
+                                                          0.02 *     0.23 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U85/ZN (NAND2_X2)
+                                                          0.02 *     0.25 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U54/ZN (XNOR2_X2)
+                                                          0.04 *     0.30 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U6/ZN (OR2_X2)
+                                                          0.03 *     0.33 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U63/ZN (NAND2_X2)
+                                                          0.01 *     0.34 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/U93/ZN (XNOR2_X2)
+                                                          0.04 *     0.38 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i1_i2_multiplier/data_out[3] (multiplier_signed_opt_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_31)
+                                                          0.00       0.38 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/data_in_1[3] (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_7)
+                                                          0.00       0.38 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/U20/ZN (NOR2_X4)
+                                                          0.03 *     0.41 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/U10/ZN (OAI21_X2)
+                                                          0.02 *     0.43 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/U37/ZN (AOI21_X1)
+                                                          0.05 *     0.48 r
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/U33/ZN (OAI21_X1)
+                                                          0.02 *     0.50 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/U35/ZN (XNOR2_X1)
+                                                          0.04 *     0.54 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_adder/data_out[6] (adder_signed_param_DATA_IN_WIDTH8_DATA_OUT_WIDTH8_TAKE_MSB0_7)
+                                                          0.00       0.54 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/down_mixer_instance/i_out[6] (down_mixer_INPUT_WIDTH8_OUTPUT_WIDTH8_7)
+                                                          0.00       0.54 f
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/i_mixer_reg[6]/D (DFF_X1)
+                                                          0.00 *     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.58       0.58
+  clock network delay (ideal)                             0.00       0.58
+  genblk_rx_signal_decode[0].readout_rx_signal_decode_unit_instance/i_mixer_reg[6]/CK (DFF_X1)
+                                                          0.00       0.58 r
+  library setup time                                     -0.04       0.54
+  data required time                                                 0.54
+  --------------------------------------------------------------------------
+  data required time                                                 0.54
+  data arrival time                                                 -0.54
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+1
