@@ -21,7 +21,7 @@ The current version covers the baseline design of QIsim except Optimization #1~8
 * Open-source frameworks
     * [Yosys](https://github.com/YosysHQ/yosys), [JoSIM](https://joeydelp.github.io/JoSIM)
 * Commercial frameworks
-    * [Design Compiler Topographical Mode](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/dc-ultra.html)
+    * [Design Compiler Ultra](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/dc-ultra.html)
 
 Here is the commands for linux and python packages.
 For the open-source and commercial frameworks, please install them individually.
