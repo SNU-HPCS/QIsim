@@ -475,4 +475,13 @@ python3.8 ftqc_error_simulator.py -s 1.18e-4 -t 0.0023 -m 0.00779 -r 122000 -c 1
 If you use this modeling framework for your research, please cite the paper below.
 
 [\[1\]](#markdown-header-publications) D. Min, J. Kim, J. Choi, I. Byun, K. Inoue, M. Tanaka, and J. Kim, “QIsim: Architecting 10+K Qubit QC Interfaces Toward Quantum Supremacy,” in *Proceedings of the 50th International Symposium on Computer Architecture (ISCA’23).*
+```
+@inproceedings{min2023qisim,
+  title={QIsim: Architecting 10+ K Qubit QC Interfaces Toward Quantum Supremacy},
+  author={Min, Dongmoon and Kim, Junpyo and Choi, Junhyuk and Byun, Ilkwon and Tanaka, Masamitsu and Inoue, Koji and Kim, Jangwoo},
+  booktitle={Proceedings of the 50th Annual International Symposium on Computer Architecture},
+  pages={1--16},
+  year={2023}
+}
+```
 
