@@ -36,13 +36,13 @@ pip install SupermarQ
 ```
 
 ## 0. Contents
-* [1. 4K device model](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#1-4k-device-model)
-    * [1-1. 4K CMOS-based QCI](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#1-1-4k-cmos-based-qci)
-    * [1-2. 4K SFQ-based QCI](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#1-2-4k-sfq-based-qci)
-* [2. Gate-error model](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-gate-error-model)
-    * [2-1. 1Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-1-1q-gate-error-of-cmos-based-qcis)
-    * [2-2. 2Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-2-2q-gate-error-of-cmos-based-qcis)
-    * [2-3. Readout error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-3-readout-error-of-cmos-based-qcis)
+* [1. 4K device model](https://github.com/SNU-HPCS/QIsim#1-4k-device-model)
+    * [1-1. 4K CMOS-based QCI](https://github.com/SNU-HPCS/QIsim#1-1-4k-cmos-based-qci)
+    * [1-2. 4K SFQ-based QCI](https://github.com/SNU-HPCS/QIsim#1-2-4k-sfq-based-qci)
+* [2. Gate-error model](https://github.com/SNU-HPCS/QIsim#2-gate-error-model)
+    * [2-1. 1Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-1-1q-gate-error-of-cmos-based-qcis)
+    * [2-2. 2Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-2-2q-gate-error-of-cmos-based-qcis)
+    * [2-3. Readout error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-3-readout-error-of-cmos-based-qcis)
     * [2-4. 1Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-1-1q-gate-error-of-sfq-based-qcis)
     * [2-5. 2Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-2-2q-gate-error-of-sfq-based-qcis)
     * [2-6. Readout error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-3-readout-error-of-sfq-based-qcis)
