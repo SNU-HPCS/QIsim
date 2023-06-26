@@ -8,7 +8,7 @@ QIsim evaluates the target QCI's scalability in terms of the fidelity and runtim
 The major strength of QIsim is its wide technology coverage; it supports (1) 300K QCIs with the coaxial cable, (2) microstrip, and (3) photonic link, (4) 4K CMOS-based QCI, and (5) 4K SFQ-based QCI.
 QIsim is developed by **[HPCS Lab](https://hpcs.snu.ac.kr)** in Seoul National University (*SNU*).
 
-QIsim consists of the following four submodels: (1) *4K device model*, (2) *gate-error model*, (3) *timing simulator*, and (4) *workload-level error simulator*. Please refer to our QIsim paper (published on ISCA'23 [\[1\]](#markdown-header-publications)) for more details of our modeling methodology.
+QIsim consists of the following four submodels: (1) *4K device model*, (2) *gate-error model*, (3) *timing simulator*, and (4) *workload-level error simulator*. Please refer to our [QIsim paper](https://dl.acm.org/doi/abs/10.1145/3579371.3589036) (published on ISCA'23) for more details of our modeling methodology.
 
 #### Current version
 The current version covers the baseline design of QIsim except Optimization #1~8.
@@ -43,20 +43,20 @@ pip install SupermarQ
     * [2-1. 1Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-1-1q-gate-error-of-cmos-based-qcis)
     * [2-2. 2Q gate error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-2-2q-gate-error-of-cmos-based-qcis)
     * [2-3. Readout error of CMOS-based QCIs](https://github.com/SNU-HPCS/QIsim#2-3-readout-error-of-cmos-based-qcis)
-    * [2-4. 1Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-1-1q-gate-error-of-sfq-based-qcis)
-    * [2-5. 2Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-2-2q-gate-error-of-sfq-based-qcis)
-    * [2-6. Readout error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-3-readout-error-of-sfq-based-qcis)
-        * [2-6-1. JPM state preparation stage](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-6-1-jpm-state-preparation-stage)
-        * [2-6-2. JPM readout stage](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#2-6-2-jpm-readout-stage)
-* [3. Timing simulator](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#3-timing-simulator)
-    * [3-1. Workload generation](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#3-1-workload-generation)
-    * [3-2. CMOS-based QCI](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#3-2-cmos-based-qci)
-    * [3-3. 4K SFQ-based QCI](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#3-3-4k-sfq-based-qci)
-* [4. Workload-level error simulator](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#4-workload-level-error-simulator)
-    * [4-1. Error simulator for NISQ workloads](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#4-1-error-simulator-for-nisq-workloads)
+    * [2-4. 1Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim#2-4-1q-gate-error-of-sfq-based-qcis)
+    * [2-5. 2Q gate error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim#2-5-2q-gate-error-of-sfq-based-qcis)
+    * [2-6. Readout error of SFQ-based QCIs](https://github.com/SNU-HPCS/QIsim#2-6-readout-error-of-sfq-based-qcis)
+        * [2-6-1. JPM state preparation stage](https://github.com/SNU-HPCS/QIsim#2-6-1-jpm-state-preparation-stage)
+        * [2-6-2. JPM readout stage](https://github.com/SNU-HPCS/QIsim#2-6-2-jpm-readout-stage)
+* [3. Timing simulator](https://github.com/SNU-HPCS/QIsim#3-timing-simulator)
+    * [3-1. Workload generation](https://github.com/SNU-HPCS/QIsim#3-1-workload-generation)
+    * [3-2. CMOS-based QCI](https://github.com/SNU-HPCS/QIsim#3-2-cmos-based-qci)
+    * [3-3. 4K SFQ-based QCI](https://github.com/SNU-HPCS/QIsim#3-3-4k-sfq-based-qci)
+* [4. Workload-level error simulator](https://github.com/SNU-HPCS/QIsim#4-workload-level-error-simulator)
+    * [4-1. Error simulator for NISQ workloads](https://github.com/SNU-HPCS/QIsim#4-1-error-simulator-for-nisq-workloads)
     * [4-2. Error simulator for FTQC workloads](https://github.com/SNU-HPCS/QIsim#4-2-error-simulator-for-ftqc-workloads)
-* [5. Contributors](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#5-contributors)
-* [6. Publication](https://github.com/SNU-HPCS/QIsim/blob/master/README.md#6-publication)
+* [5. Contributors](https://github.com/SNU-HPCS/QIsim#5-contributors)
+* [6. Publication](https://github.com/SNU-HPCS/QIsim#6-publication)
 
 ## 1. 4K device model
 
@@ -474,7 +474,7 @@ python3.8 ftqc_error_simulator.py -s 1.18e-4 -t 0.0023 -m 0.00779 -r 122000 -c 1
 ## 6. Publication
 If you use this modeling framework for your research, please cite the paper below.
 
-[\[1\]](#markdown-header-publications) D. Min, J. Kim, J. Choi, I. Byun, K. Inoue, M. Tanaka, and J. Kim, “QIsim: Architecting 10+K Qubit QC Interfaces Toward Quantum Supremacy,” in *Proceedings of the 50th International Symposium on Computer Architecture (ISCA’23).*
+* D. Min, J. Kim, J. Choi, I. Byun, K. Inoue, M. Tanaka, and J. Kim, “QIsim: Architecting 10+K Qubit QC Interfaces Toward Quantum Supremacy,” in *Proceedings of the 50th International Symposium on Computer Architecture (ISCA’23).*
 ```
 @inproceedings{min2023qisim,
   title={QIsim: Architecting 10+ K Qubit QC Interfaces Toward Quantum Supremacy},
