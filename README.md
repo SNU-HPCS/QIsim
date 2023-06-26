@@ -28,7 +28,11 @@ For the open-source and commercial frameworks, please install them individually.
 Note that Design Compiler is only needed when you change the 4K CMOS QCI microarchitecture.
 ```
 apt install libprotobuf-dev protobuf-compiler libboost1.65-all-dev
-pip install pandas protobuf cython numpy absl-py ipython qiskit qutip ray Quanlse SupermarQ
+
+pip install pandas protobuf cython numpy absl-py ipython
+pip install qiskit
+pip install qutip ray Quanlse
+pip install SupermarQ
 ```
 
 ## 0. Contents
