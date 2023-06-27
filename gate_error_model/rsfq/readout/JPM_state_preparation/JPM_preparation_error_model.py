@@ -215,8 +215,8 @@ if __name__ == "__main__":
     T1 = args.relax # [ns] JPM T1 time of [Opremcak'21]
     T2 = 1000   # [ns] JPM T2 time which does not significantly change the final result
                 # (Opremcak did not show the JPM T2 time.)
-    gamma_e = 0.2 # [GHz] JPM excited state의 tunneling rate
-    gamma_g = 0.001 # [GHz] JPM ground state의 tunneling rate
+    gamma_e = 0.2 # [GHz] tunneling rate of JPM excited state
+    gamma_g = 0.001 # [GHz] tunneling rate of JPM ground state
 
     amp_cmos_ghz = 0.0158 # CMOS pulse power in GHz
     power_cmos_dbm = -67 # CMOS drive power following [Opremcak'14,21]
